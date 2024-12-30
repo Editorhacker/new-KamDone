@@ -1,0 +1,126 @@
+.support-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.support-container h1 {
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  padding: 0 1rem;
+}
+
+.support-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.support-item {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.support-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.support-item h2 {
+  color: #F3F4F6;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.phone, .email {
+  font-size: 1.25rem;
+  color: #7C3AED;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.phone i, .email i {
+  font-size: 1.5rem;
+}
+
+.available, .response-time {
+  color: #9CA3AF;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .support-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .support-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .support-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .support-item {
+    padding: 1.5rem;
+  }
+
+  .support-item h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .phone, .email {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .support-container h1 {
+    font-size: 1.75rem;
+  }
+
+  .support-content {
+    gap: 1rem;
+  }
+
+  .support-item {
+    padding: 1.25rem;
+  }
+
+  .support-item h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .phone, .email {
+    font-size: 1rem;
+  }
+
+  .available, .response-time {
+    font-size: 0.9rem;
+  }
+}
