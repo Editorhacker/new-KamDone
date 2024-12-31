@@ -1,6 +1,7 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "KamDone",
+  "name": "KamDone - Digital Service Provider",
+  "description":"KamDone is a leading digital services provider",
   "icons": [
     {
       "src": "favicon.ico",
