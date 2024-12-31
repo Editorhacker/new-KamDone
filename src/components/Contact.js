@@ -32,10 +32,32 @@ const Contact = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log('Form submitted:', formData);
-    // Add your form submission logic here
+    
+    const formDataWithAccessKey = {
+      ...formData,
+      access_key: 'a160e0a8-dcac-46c7-a938-ea1d9b175211' // Your actual access token
+    };
+    
+    const response = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formDataWithAccessKey)
+    });
+    
+    if (response.ok) {
+      const result = await response.json();
+      console.log('Success:', result);
+      alert('Form submitted successfully!');
+    } else {
+      const error = await response.json();
+      console.error('Error:', error);
+      alert('There was an error submitting the form: ' + (error.message || 'Unknown error.'));
+    }
   };
 
   return (
